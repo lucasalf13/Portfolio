@@ -1,0 +1,359 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-user-drag: none;
+}
+body{
+    background: linear-gradient(to right, #001D85, #00071F);
+    font-family: "Roboto", sans-serif;
+    color: white;
+    line-height: 1.6;
+}
+img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+a{
+    text-decoration: none;
+    font-family: "Roboto Serif", serif;
+    color: white;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    background-color: #001D85;
+    border: 2px solid #001D85;
+    transition: background-color 0.3s ease;
+}
+a img{
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+a:hover{
+    background-color: #00071F;
+}
+h2{
+    font-family: "Poppins", sans-serif;
+    font-size: 2.5rem;
+    text-align: center;
+    letter-spacing: 2px;
+    margin-bottom: 40px;
+}
+h3{
+    font-family: "Poppins", sans-serif;
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 20px;
+}
+section{
+    padding: 60px 20px;
+}  
+header{
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+}
+header img{
+    width: 200px;
+}
+#moi{
+    background-color: #1B1B1B;
+}
+.container-moi{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.presentation{
+    flex: 1 1 500px;
+}
+.presentation p{
+    font-size: 1.1rem;
+    max-width: 600px;
+    text-align: justify;
+    line-height: 1.5;
+    margin-bottom: 60px;
+}
+.boutons{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+.photo img{
+    width: 350px;
+    border-radius: 40px;
+    object-fit: cover;
+}
+.photo .overlay{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, #1B1B1B, transparent);
+    height: 20px;
+}
+.photo{
+    position: relative;
+}
+.demo{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+.demo img{
+    width: 150px;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+.demo img:hover{
+    transform: scale(1.1);
+}
+.langages{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+.langages img{
+    width: 60px;
+    height: 60px;
+}
+.langages img:hover{
+    transform: scale(1.4);
+}
+#contact{
+    background-color: #02092A;
+    border-radius: 2px;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+.formulaire{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+input,
+textarea{
+    width: 100%;
+    padding: 12px 15px;
+    border-radius: 10px;
+    border: none;
+    resize: vertical;
+}
+button{
+    padding: 12px;
+    background-color: #001D85;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-family: "Roboto Serif", serif;
+    transition: background-color 0.3s;
+}
+button:hover{
+    background-color: #021452;
+}
+footer{
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+    background-color: #00071F;
+}
+
+/* Container principal du carousel */
+.carousel-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Carousel des projets */
+.projects-carousel {
+    display: flex;
+    gap: 20px;
+    will-change: transform;
+    animation: scroll 240s linear infinite;
+}
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-1000%);
+    }
+}
+
+.project-card {
+    flex: 0 0 calc(33.33% - 60px); /* Taille des cartes */
+    width: 10px;
+    height: auto; /* Ajuste la hauteur automatiquement */
+    text-align: center; /* Centre le texte sous l'image */
+}
+.projects-carousel .project-card {
+    flex: 0 0 calc(33.33% - 100px); /* Taille des cartes */
+    height: 270px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #001D85;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+h4{
+    margin: 10px 0;
+}
+.project-card p {
+    margin: 10px 0;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    color: #99c5f3;
+    font-family: "Roboto";
+
+}
+.project-card img {
+    width: 200px;
+    height: 166px;
+    border-radius: 10px;
+    object-fit: contain; /* Ajuste l'image pour qu'elle soit entièrement visible sans être coupée */
+    background-color: #f4f4f4; /* Ajoute un fond pour les images qui ne remplissent pas tout l'espace */
+}
+
+
+/* Responsive styles */
+@media screen and (max-width: 1024px) {
+    .project-card {
+        flex: 0 0 calc(50% - 20px); /* Affiche 2 images visibles */
+        height: 200px; /* Réduit la hauteur des cartes */
+    }
+
+    .project-card img {
+        object-fit: contain; /* Assure que l'image reste visible sans être coupée */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .project-card {
+        flex: 0 0 calc(100% - 20px); /* Affiche 1 image visible */
+        height: 180px; /* Réduit encore la hauteur des cartes */
+    }
+
+    .project-card img {
+        object-fit: contain; /* Maintient l'image visible sans déformation */
+    }
+
+    .carousel-btn {
+        font-size: 1.2rem; /* Réduit la taille des boutons */
+        padding: 8px 16px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .project-card {
+        height: 150px;
+        width: 1px; /* Réduit la hauteur pour les petits écrans */
+    }
+
+    .project-card img {
+        object-fit: contain; /* Maintient l'image visible sans déformation */
+    }
+
+    .carousel-btn {
+        font-size: 1rem; /* Réduit encore la taille des boutons */
+        padding: 6px 12px;
+    }
+}
+
+@media screen and (max-width: 1024px){
+    .presentation p{
+      font-size: 1rem;
+    }
+    .photo img{
+      width: 280px;
+    }
+}
+@media screen and (max-width: 768px){
+    .container-moi{
+      flex-direction: column;
+      text-align: center;
+    }
+    .presentation,
+    .photo{
+      flex: 1 1 100%;
+    }
+    .demo img{
+      width: 120px;
+    }
+    .langages img{
+      width: 50px;
+      height: 50px;
+    }
+}
+@media screen and (max-width: 480px){
+    h2{
+      font-size: 2rem;
+    }
+    .boutons{
+      justify-content: center;
+    }
+    .demo img{
+      width: 100px;
+    }
+    .langages{
+      gap: 15px;
+    }
+}
+
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #001D85;
+    color: white;
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.popup.hidden {
+    display: none;
+}
+
+.popup button {
+    background-color: #ffffffb6;
+    color: #001D85;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-family: "Roboto", sans-serif;
+    transition: background-color 0.3s ease;
+}
+
+.popup button:hover {
+    background-color: #f4f4f4;
+}
